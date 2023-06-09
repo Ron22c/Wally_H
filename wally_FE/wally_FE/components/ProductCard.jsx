@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, Pressable, Image, StyleSheet, Alert} from 'react-native';
+import {View, Text, Pressable, Image, StyleSheet, Alert, Button} from 'react-native';
 
 export default function ProductCard({item}) {
   
@@ -11,7 +11,7 @@ export default function ProductCard({item}) {
   }
 
   return (
-    <Pressable style={styles.container} onPress={__onTap}>
+    <Pressable style={styles.container}>
       <View
         >
         <Image 
@@ -27,6 +27,7 @@ export default function ProductCard({item}) {
         <Text
           style={styles.text}>{price}</Text>
       </View>
+      <Button title='Add To Cart' onPress={__onTap} />
     </Pressable>
   );
 }
